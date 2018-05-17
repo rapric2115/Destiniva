@@ -1,0 +1,31 @@
+.bg-header {
+    background-image: url(../assets/bg-images/beach.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.header h1 {
+    color: snow !important;
+    padding-top: 6rem;
+    padding-bottom: 15px;
+}
+.header p {
+    color: snow;
+    padding-top: 1rem;
+}
+.btn-pad {
+    padding: 10px;
+}
+.btn-DST {
+    background-color: rgba(85, 100, 208, .4);
+    color: snow;
+}
+.price {
+    color: brown;
+    font-weight: bold;
+}
+.preSaleTitle {
+    color: snow;
+}
