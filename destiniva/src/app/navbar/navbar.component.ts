@@ -1,4 +1,6 @@
+import { AuthService } from '../auth.service';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-navbar',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  title = 'Destiniva';
-  constructor() { }
+ profile: any;
+
+  constructor(public authService: AuthService) { }
 
   ngOnInit() {
+    if (this.authService.userProfile) {
+      this.profile = this.authService.userProfile;
+    } else {
+        this.authService.getProfile((err, profile) => {
+        this.profile = profile;
+      });
+    }
   }
 
 }

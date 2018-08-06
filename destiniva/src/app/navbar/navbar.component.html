@@ -1,33 +1,60 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <a class="navbar-brand" href="#">
-    <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-    {{title}}
+    <img src="../../assets/logos/logo_transparent_backgroundwhite_jet.png" width="30" height="30" class="d-inline-block align-top img-fluid" alt="">
+    Destiniva
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">About Destiniva</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+      <li class="nav-item">
+        <a class="nav-link" href="#">Solutions</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">DST Tokens</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Token Ecosystem</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Team</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">FAQ</a>
+      </li>
+      <li class="nav-item nav-link">
+          |
+      </li>
+      <li class="nav-item" *ngIf="authService.isAuthenticated()">
+          <a class="nav-link" href="#">
+            <img src={{profile.picture}} alt="" class="img-fluid img-profile-navbar rounded-circle">
+          </a>
+        </li>
+      <li class="nav-item dropdown" *ngIf="authService.isAuthenticated()">
+        <a class="nav-link dropdown-toggle" routerLink="/userDash" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{profile.given_name || profile.nickname }}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item">Profile</a>
+          <a href="" class="dropdown-item"  *ngIf="authService.isAuthenticated()"
+          routerLink="/admin" disabled>Admin Session</a>
+          <a class="dropdown-item" routerLink="/orders">Orders</a>
+          <a class="dropdown-item" href="#">Help</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#" *ngIf="authService.isAuthenticated()" (click)="authService.logout()">Logout</a>
         </div>
       </li>
     </ul>
-    <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Register</button>
-    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Login</button>
+    <div class="form-inline my-2 my-lg-0">
+      <button class="btn btn-sm btn-outline-light my-2 my-sm-0" *ngIf="!authService.isAuthenticated()" (click)="authService.login()">Access Destiniva</button>
+    </div>
   </div>
 </nav>

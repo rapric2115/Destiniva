@@ -1,6 +1,8 @@
-button {
-    margin-left: 10px;
+.img-profile-navbar {
+  width: 1.5vw;
 }
-.bg-transparent {
-    background: transparent !important;
+@media (min-width:360px) and (max-width:640px) {
+ /* .navbar-toggler {
+    display: none !important;
+  }*/
 }
