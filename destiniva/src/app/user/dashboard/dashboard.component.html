@@ -1,0 +1,61 @@
+<app-side-navbar></app-side-navbar>
+<div class="userDash ptb">
+  <h2 class="text-center title">Welcome Back {{ profile.given_name || profile.nickname }}</h2>
+  <div class="row">
+    <div class="col-md-4 card-padding-bottom">
+      <div class="card mx-auto shadow" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">DST TOKENS BALNACE</h5>
+          <h6 class="card-subtitle mb-2 text-muted">0.0000</h6>
+
+          <a routerLink="/buyTokens" class="btn btn-outline-primary">Buy Tokens</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+        <table class="table table-sm">
+            <thead class="thead-blue">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">stage</th>
+                <th scope="col">Discount</th>
+                <th scope="col">Timeline</th>
+                <th scope="col">Minimum Investment</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>pre-Sale</td>
+                <td> Maximum Discount up to 80% <br>
+                Up to 1M USD: 70% <br>
+                1M - 3M USD: 75% <br>
+                +3M USD: 80%
+                </td>
+                <td>20 May to 20 June</td>
+                <td>10K USD</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Public Sale</td>
+                <td>1st 48 hrs 60% discount <br>
+                17 July to 21 July: 50% <br>
+                22 July to 28 July: 35% <br>
+                29 July to 4 August: 20% <br>
+                5 August to 11 August: 0%
+                </td>
+                <td>15 July to 15 August</td>
+                <td>1K USD</td>
+              </tr>
+             <!-- <tr>
+               <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>-->
+            </tbody>
+          </table>
+          <p class="text-info text-center">**All unsold tokens will be Burned/eliminated from the market forever!</p>
+    </div>
+  </div>
+</div>

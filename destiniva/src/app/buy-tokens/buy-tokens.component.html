@@ -1,0 +1,63 @@
+<div class="buyTokenContainer">
+    <h3 class="text-center">
+      Purchase Tokens
+    </h3>
+    <div class="row text-center">
+      <div class="col"></div>
+      <div class="col-md-6">
+        <form class="form-buyTokens">
+            <img class="mb-4" src="../../assets/logos/logo_transparent_backgroundblue_jet.png" alt="" width="72" height="72">
+
+            <form class="form-row">
+            <label for="inputAmount" class="sr-only">Amount</label>
+            <input type="number" id="inputAmount" class="form-control amount" #amount (keyup.enter)="update(amount.value)" (blur)="update(amount.value)" placeholder="Amount" required autofocus>
+            <select class="custom-select" (change)="firstDropDownChanged($event.target.value)">
+                <option selected *ngFor='let v of _values'>{{ v }}</option>
+              </select>
+            </form>
+
+            <label for="inputPassword" class="sr-only">Tokens</label>
+            <h5 class="text-center">Tokens: <span>{{ values /( prices / btcPrice ) | number }}</span></h5>
+            <div class="checkbox mb-3">
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">I acknowledge that I have read the <a href="#">Terms of Sales &amp; Conditions</a></label>
+              </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="addValues(amount.value)">Pay with Crypto</button>
+            <p class="mt-5 mb-3 text-muted"> Token price {{ prices }} USD (Discounts may apply)</p>
+        </form>
+          </div>
+          <div class="col"></div>
+    </div>
+    <div class="table text-center">
+        <table class="table table-borderless">
+            <thead class="t-head-blue">
+              <tr>
+                <th scope="col">Stage</th>
+                <th scope="col">Discount</th>
+                <th scope="col">Timeline</th>
+                <th scope="col">Minimum Investment</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Pre Sales</th>
+                <td>Maximum Discount up to 80% up to 1M USD: 70%</td>
+                <td>20 May to 20 July</td>
+                <td>10K USD</td>
+              </tr>
+              <!--<tr>
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td scope="row"></td>
+                <td></td>
+                <td></td>
+              </tr>-->
+            </tbody>
+          </table>
+    </div>
+    </div>

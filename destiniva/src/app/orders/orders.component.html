@@ -1,0 +1,43 @@
+<div class="orderContainer">
+  <h3 class="text-center">Orders</h3>
+  <div class="tableOrders">
+  <table class="table">
+      <thead class="thead-blue">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Reference</th>
+          <th scope="col">Date</th>
+          <th scope="col">Payment Option</th>
+          <th scope="col">Fiat Amount</th>
+          <th scope="col">Currency</th>
+          <th scope="col">Token Amount</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td><a routerLink="/orderReference">{{ reference }}</a></td>
+          <td>{{ date | date}}</td>
+          <td>{{ PaymentOption }}</td>
+          <td>{{ FiatAmount }}</td>
+          <td>{{ Currency }}</td>
+          <td>{{ TokenAmount }}</td>
+          <td><span class="status">{{ Status }}</span></td>
+        </tr>
+       <!-- <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>-->
+      </tbody>
+    </table>
+    </div>
+</div>

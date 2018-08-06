@@ -1,0 +1,36 @@
+.ptb {
+  padding-top: 2.5rem;
+  padding-bottom: auto;
+}
+.border {
+  border: 1px solid #cccccc;
+}
+.pd-top {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+.card-footer {
+  background-image: url(../../../assets/background/bg-userDash.png);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 12rem;
+}
+.btn-pd-top {
+  padding-top: 30%;
+}
+.img-profile {
+  width: 20vw;
+}
+.mx-auto {
+  margin: auto;
+}
+.title {
+  padding-bottom: 1.5rem;
+}
+
+@media (min-width: 360px) and (max-width:640px){
+  .card-padding-bottom {
+    padding-bottom: 1.5rem;
+  }
+}

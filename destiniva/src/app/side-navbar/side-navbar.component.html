@@ -1,0 +1,23 @@
+<nav>
+    <a href="#menu" class="box-shadow-menu"></a>
+  <ul>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/home"><i class="fas fa-home"></i> Home</a>
+    </li>
+    <li>
+      <a routerLink="/buyTokens"><i class="fas fa-shopping-cart"></i> Buy Tokens</a>
+    </li>
+    <li>
+      <a href="#"><i class="fas fa-wallet"></i> Wallet</a>
+    </li>
+    <li>
+      <a href="#"><i class="fas fa-user"></i> User Information</a>
+    </li>
+    <li>
+      <a href="#"><i class="fas fa-users-cog"></i> Affiliate</a>
+    </li>
+    <li>
+        <a href="#" *ngIf="authService.isAuthenticated()" (click)="authService.logout()">Logout</a>
+    </li>
+  </ul>
+</nav>

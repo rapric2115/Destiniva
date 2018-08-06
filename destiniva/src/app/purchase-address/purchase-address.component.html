@@ -1,0 +1,32 @@
+<div class="transContainer">
+    <h3 class="text-center">Transfer</h3>
+    <div class="row text-center">
+      <div class="col"></div>
+      <div class="col-md-4 btn-deposit">
+        <button href="#" class="btn btn-primary">
+          Deposit
+        </button>
+      </div>
+      <div class="col-md-4 btn-withdraw">
+        <button href="#" class="btn btn-secondary">
+          Withdraw
+        </button>
+      </div>
+      <div class="col"></div>
+    </div>
+    <div class="text-center row">
+      <div class="col"></div>
+      <div class="col-md-6 qrCode text-center">
+        <img src="http://chart.googleapis.com/chart?chs=150x150&cht=qr&chl={{ genAdd.address }}"  alt="qrcode" width="25%" height="auto">
+      </div>
+      <div class="col"></div>
+    </div>
+    <div class="text-center">
+    </div>
+    <div class="text-center">{{ genAdd.address }}</div>
+    <div class="address text-center">
+      <button class="btn btn-outline-primary">Show Address</button>
+      <button class="btn btn-outline-primary">Request Specific Amount</button>
+      <button class="btn btn-outline-primary">Generate New Address</button>
+    </div>
+    </div>

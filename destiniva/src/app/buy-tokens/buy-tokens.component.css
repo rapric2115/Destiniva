@@ -1,0 +1,22 @@
+.buyTokenContainer {
+  margin-top: 1.5rem;
+}
+.form-buyTokens{
+  padding: 1rem 1.5rem;
+}
+.form-row {
+  text-align: center !important;
+  padding: .5rem !important;
+}
+.amount {
+  width: 70% !important;
+  margin: 0 .75rem;
+}
+.custom-select {
+  width: 25%;
+}
+@media (min-width: 320px) and (max-width: 768px){
+  .amount {
+    width: 65% !important;
+  }
+}

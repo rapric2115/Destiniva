@@ -1,0 +1,20 @@
+<div class="container mx-auto">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let ad of DSTad">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Admin</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{ ad.name }} {{ ad.lastName }}</h6>
+              <p class="card-text"><strong class="small-10-font">Position: </strong>{{ ad.position }}</p>
+              <p class="card-text">{{ ad.phone }}</p>
+              <p class="card-text">{{ ad.email }}</p>
+              <p class="card-text">{{ ad.salary }}</p>
+
+          <span class="button is-small btn-primary" *ngIf="ad.active" (click)="updateAdmin(false)">Not an Admin</span>
+          <span class="button is-small btn-primary" *ngIf="!ad.active" (click)="updateAdmin(true)">Is Admin</span>
+          <span class="button is-small btn-danger" (click)="deleteAdmin()">Delete</span>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>

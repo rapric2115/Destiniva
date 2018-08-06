@@ -1,0 +1,113 @@
+<div class="container">
+  <h4 class="text-center">Welcome to Admin Section --Name--</h4>
+  <div class="row">
+    <div class="col-md-3 spacebetween">
+        <div class="card mx-auto" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-center"><strong>BTC Collected</strong></li>
+              <li class="list-group-item text-center"> {{ balance / 1000000000 }} </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-3 spacebetween">
+        <div class="card mx-auto" style="width: 18rem;">
+            <ul class="list-group list-group-flush" *ngFor="let p of DSTprice">
+              <li class="list-group-item text-center"><strong>DST Token Price</strong></li>
+              <li class="list-group-item text-center">{{ p }}</li>
+              <li class="list-group-item text-center">
+                <form>
+                  <input type="number" id="dstp" #dstp class="form-control" placeholder="update DST Token price">
+                  <a href="" class="btn btn-outline-warning btn-form" (click)="update(dstp)">Update</a>
+                </form>
+              </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-3 spacebetween">
+        <div class="card mx-auto" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-center"><strong>Manage Admins</strong></li>
+              <li class="list-group-item text-center">
+                <a routerLink="/add" class="btn btn-outline-warning btn-form">Add Admin</a>
+              </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-3 spacebetween">
+        <div class="card mx-auto" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-center"><strong>Manage Groups</strong></li>
+              <li class="list-group-item text-center" >
+                <form>
+                  <input type="text" class="form-control" placeholder="Add new Group" >
+                  <a href="" class="btn btn-outline-warning btn-form">Add New Group</a>
+                </form>
+              </li>
+            </ul>
+        </div>
+    </div>
+  </div><!-- Firts Row ends -->
+  <div class="row">
+    <div class="col-md-8">
+        <table class="table">
+            <thead class="thead-blue">
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let u of users">
+              <tr>
+                <td>{{ u.name }}</td>
+                <td>{{ u.email }}</td>
+              </tr>
+            </tbody>
+          </table>
+
+    </div>
+    <div class="col-md-4 spacebetween">
+        <div class="card mx-auto" style="width: 18rem;">
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item text-center"><strong>List Admins</strong>
+                <a routerLink="/adminSection" class="btn btn-outline-success btn-align-right"><i class="fas fa-info"></i></a>
+              </li>
+          </ul>
+            <ul class="list-group list-group-flush" *ngFor="let ad of adRef">
+              <li class="list-group-item text-center">
+                <span class="pright">{{ ad.name }} {{ ad.lastname }}</span>
+                <span class="pleft">
+                <button class="btn btn-outline-primary btn-form">
+                    <i class="fas fa-pencil-alt"></i>
+                </button>
+                <button class="btn btn-outline-danger btn-form" (click)="deleteAdmin()">
+                    <i class="far fa-trash-alt"></i>
+                </button>
+                </span>
+              </li>
+            </ul>
+        </div>
+    </div>
+  </div><!-- second Section ends -->
+  <div class="row">
+    <div class="col-md-4 spacebetween">
+        <div class="card mx-auto" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-center"><strong>List groups</strong></li>
+              <li class="list-group-item text-center">
+                <span class="pright">Developers</span>
+                <span class="pleft">
+                    <button class="btn btn-outline-info btn-form">
+                        <i class="far fa-check-circle"></i>
+                    </button>
+                    <button class="btn btn-outline-danger btn-form">
+                        <i class="far fa-trash-alt"></i>
+                    </button>
+                </span>
+              </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4"></div>
+  </div>
+</div><!-- Containers ends -->

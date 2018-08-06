@@ -1,0 +1,25 @@
+countdown {
+  display: inline-block;
+  margin-top: 2.5rem;
+}
+.time {
+  display: inline-block;
+  padding: .75rem;
+  margin: auto;
+  border: 2px solid snow;
+  color: #0074d9;
+  font-weight: 600;
+  margin: .5rem;
+  font-size: 2rem;
+}
+.flip-cd {
+  margin-top: 1.5rem;
+  margin: auto;
+}
+
+@media (min-width: 360px) and (max-width: 640px){
+  .time {
+    font-size: 1rem;
+    margin: .2rem;
+  }
+}

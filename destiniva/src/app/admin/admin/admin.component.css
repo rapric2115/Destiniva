@@ -1,0 +1,29 @@
+.container {
+  padding-top: 1.5rem;
+}
+.spacebetween {
+  margin: .35rem auto;
+}
+.btn-form {
+  margin: .3rem;
+}
+.btn-form {
+  margin: 0 1px;
+}
+.firstLine {
+  text-align-last: left !important;
+}
+.last {
+  text-align-last: right;
+}
+.pright {
+  padding-right: 2%;
+}
+.thead-blue {
+  background-color: #0074d9;
+  color: snow;
+}
+.btn-align-right {
+  align-items: flex-end;
+  margin-left: 1.5rem;
+}

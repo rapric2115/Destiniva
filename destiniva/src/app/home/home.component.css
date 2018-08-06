@@ -1,0 +1,686 @@
+/*Primary Colors Variables CSS*/
+:root {
+  --dst-primary-color: #0074d9;
+  --dst-white-font: snow;
+}
+
+h1 {
+  color: var(--ds-white-font) !important;
+}
+
+.row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+.mtb {
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+.pd-tb {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Front Page CSS */
+.container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.currentBalance {
+  display: none;
+}
+
+.bg-frontPage {
+  background-image: url(../../assets/background/beach.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+}
+.title {
+  padding-top: 4.75rem !important;
+  color: var(--dst-white-font) !important;
+}
+.d-btn-group {
+  margin-top: 1.5rem;
+}
+.countdown {
+  margin-top: 1.5rem;
+}
+/* tourism market */
+.bg-blue {
+  background-color: #0074d9;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+.bg-blue p {
+  color: snow;
+  font-size: 1.5rem;
+  padding: 2rem 0;
+}
+.bg-blue span {
+  font-size: 2.5rem;
+}
+
+.bg-sky {
+  background-color:  #3285FF;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+.bg-sky p {
+  color: snow;
+  font-size: 1.5rem;
+  padding: 2rem 0;
+}
+.bg-sky span {
+  font-size: 2.5rem;
+}
+/* Video */
+.imgVideo {
+  width: 10rem;
+  height: auto;
+  position: relative;
+  top: 35%;
+  left: 30%;
+  background-color: transparent;
+  border-radius: 50%;
+  -webkit-box-shadow: -1px 10px 15px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 10px 15px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 10px 15px 0px rgba(0,0,0,0.75);
+}
+.videoCona {
+  margin-top: .5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.play {
+  width: 70px;
+  height: 70px;
+  background: #0074d9;
+  display: block;
+  margin: 0 auto;
+  /* Important for :after */
+  position: relative;
+  /* Makes a circle */
+  border-radius: 50%;
+  top: 90%;
+  left: 30%;
+}
+
+.play:hover {
+  background: #333;
+  cursor: pointer;
+}
+
+.play:after {
+  position: absolute;
+  content: "";
+  /* Centering */
+  top: 50%;
+  margin-top: -15px;
+  left: 50%;
+  margin-left:  -8px;
+  /* CSS Triangle */
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 0 15px 20px;
+  border-color: transparent transparent transparent #ffffff;
+}
+.modal {
+  width: 90vw !important;
+  margin: auto !important;
+  margin-top: 2.5rem;
+}
+.modal-backdrop.in {
+	opacity: 0.9;
+}
+div#myModal {
+  background: rgba(240, 248, 255, 0.18);
+}
+.modal-dialog {
+  width: 1000px;
+
+  /* For responsive */
+  max-width:90%;
+  min-width:600px;
+}
+.modal-content {
+  background-color: transparent !important;
+  margin: auto !important;
+  border: 0;
+}
+.modal-backdrop.show {
+  opacity: 0.9 !important;
+}
+.modal-backdrop {
+  opacity: .85 !important;
+}
+iframe {
+  width: 85vw;
+}
+/* 90% width container */
+.video-container {
+  width: 90%;
+  /* Centering */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.close {
+  width: 20px;
+  fill: white;
+  position: absolute;
+  right: 0;
+  /* Bring above video */
+  top: -30px;
+}
+
+.close:hover {
+  /* 50% opacity white */
+  fill: rgba(255,255,255,0.5);
+  cursor: pointer;
+}
+
+/* Class to fade in overlay */
+.show {
+  opacity: 1;
+}
+
+/* button animations */
+.btn-draw {
+  position: relative;
+  display: inline-block;
+  color: snow;
+  border-bottom: 2px solid #0074d9;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.btn-draw span {
+  color: #0074d9;
+  font-size: 1.25rem;
+ }
+.btn-draw:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 2px;
+  background: #0074d9;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition-delay: 0.6s;
+}
+.btn-draw > span {
+  position: relative;
+  display: block;
+  padding: 0.5em;
+  color: inherit;
+}
+.btn-draw > span:before, .btn-draw > span:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #0074d9;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+.btn-draw > span:before {
+  height: 2px;
+  width: 100%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  transition-delay: 0.4s;
+}
+.btn-draw > span:after {
+  height: 100%;
+  width: 2px;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  transition-delay: 0.2s;
+}
+.btn-draw:hover:after, .btn-draw:hover > span:before, .btn-draw:hover > span:after {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+.btn-draw:hover:after {
+  transition-delay: 0s;
+}
+.btn-draw:hover > span:before {
+  transition-delay: 0.2s;
+}
+.btn-draw:hover > span:after {
+  transition-delay: 0.4s;
+}
+.btn-draw:hover {
+  color: snow !important;
+  background-color: #0074d9;
+  transition-delay: 0.6s;
+}
+
+/* button animations ends line */
+
+.sixbynine {
+  padding-bottom: 56.25%;
+}
+.fourbythree {
+  padding-bottom: 75%;
+}
+iframe {
+  margin-top: 1.5rem;
+  width: 100%;
+ /* background-color: #f6c954;
+  -webkit-box-shadow: -1px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 10px 5px 0px rgba(0,0,0,0.75);*/
+  }
+.text-font {
+  font-size: 10px;
+}
+/* Token Sales Stages */
+.thead-blue {
+  background-color: #0074d9;
+}
+.thead-blue tr {
+  color: snow;
+}
+.table-padding {
+  margin: auto;
+  padding: .5rem;
+}
+.stages {
+  margin: 2.5rem 0;
+  padding-top: 1.5rem;
+}
+.stages-title {
+  padding: .5rem 0;
+}
+
+/* Exchange logo */
+.btn-info {
+  background-color: #0074d9;
+}
+.btn-info:hover {
+  color: snow !important;
+}
+.btn-info {
+  border-color: #0074d9;
+}
+.text-info {
+  color: snow !important;
+}
+.card-img {
+  width: 100%;
+  height: 10rem;
+}
+/* logo effects */
+.btnSecEffects {
+  margin: 1.5rem;
+}
+.logoContainer {
+  margin: 4.5rem 0;
+}
+.pad-logoEffects h4 {
+  padding-top: 5.7rem !important;
+  color: #0074d9;
+  padding-bottom: 1.5rem;
+}
+.logoeffects {
+  width: 100%;
+  height: 40vh;
+}
+.imgeffects {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
+
+/* DST Token Effects */
+.token-img {
+  animation: spin 2s ease-in-out infinite;
+}
+.DSTToken {
+  animation: spin 2s ease-in-out infinite;
+}
+@keyframes spin {
+  0%    {transform: rotateY(0deg);}
+  50%   {transform: rotateY(180deg);}
+  100%  {transform: rotateY(360deg);}
+}
+
+/* pulse effects */
+
+.avatar {
+  height: 150px;
+  position: relative;
+  width: 150px;
+  margin-top: 2.5rem;
+}
+
+.avatar img {
+  border-radius: 9999px;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+@keyframes cycle-colors {
+  0% { border-color: hsl(0, 100%, 50%); }
+  25% { border-color: hsl(90, 100%, 50%); }
+  50% { border-color: hsl(180, 100%, 50%); }
+  75% { border-color: hsl(270, 100%, 50%); }
+  100% { border-color: hsl(360, 100%, 50%); }
+}
+
+@keyframes pulse {
+  to {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+.avatar::before,
+.avatar::after {
+  animation: pulse 2s linear infinite;
+  border: #0074d9 solid 8px;
+  border-radius: 9999px;
+  box-sizing: border-box;
+  content: ' ';
+  height: 140%;
+  left: -20%;
+  opacity: .6;
+  position: absolute;
+  top: -20%;
+  transform: scale(0.714);
+  width: 140%;
+  z-index: 1;
+}
+
+.avatar::after {
+  animation-delay: 1s;
+}
+
+.avatar:hover::before,
+.avatar:hover::after {
+  animation: pulse 1s linear infinite, cycle-colors 6s linear infinite;
+}
+
+.avatar:hover::after {
+  animation-delay: .5s;
+}
+
+/* Cryptocurrency entry Barriers */
+.bg-imageCrytoEntry {
+  background-image: url(../../assets/background/beach-tree.jpg);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 8%;
+  margin: 3.5rem 0;
+  padding-bottom: 3.5rem;
+}
+.bg-imageCrytoEntry p {
+  color: snow;
+  padding: 15px 1rem;
+}
+.bg-imageCrytoEntry h3 {
+  color: snow;
+  padding-top: 2.75rem !important;
+}
+.bg-imageCrytoEntry h4 {
+  color: snow;
+}
+/* DST Mission */
+.token {
+  margin: 2.5rem 0;
+  color: #0074d9;
+  height: 100%;
+  padding-top: 8%;
+}
+/* Platform Section */
+.platforms {
+  margin: 4.5rem 0;
+  color: #0074d9;
+}
+.img-pc {
+  padding-left: 0;
+}
+.img-laptop {
+  padding-right: 0;
+}
+/* Mobile Section */
+.imgOne {
+  background-image: url(../../assets/mobile/backgroundMobile.png) !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  background-position: center !important;
+  width: 200px;
+  height: 300px;
+  margin: auto !important;
+}
+.imgTwo {
+  background-image: url(../../assets/mobile/secondImageMobile.png) !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  background-position: center !important;
+  width: 200px;
+  height: 300px;
+  margin: auto !important;
+}
+#platformMobile {
+  background-image: url(../../assets/mobile/backgroundMobile.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 50vh;
+}
+.imgClass {
+  background-image: url(../../assets/mobile/backgroundMobile.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.back {
+  background-image: url(../../assets/mobile/firstImageMobile.png) !important;
+  width: 200px;
+  height: 300px;
+  margin: auto;
+}
+.mobileApp{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.mobileApp h3 {
+  color: #0074d9;
+}
+.mobileApp p {
+  color: #0074d9;
+}
+.mobileText {
+  padding-left: 5%;
+}
+.text-pdr {
+  padding-right: 4rem !important;
+}
+.text-pdl {
+  text-align-last: right;
+  padding-left: 4rem !important;
+}
+.title-pdl {
+  text-align-last: right;
+}
+.p-top {
+  padding-top: 2rem;
+}
+/* ATM Section */
+.atm-img {
+ /* height: 350px;*/
+  height: 50vh;
+}
+.imgATM {
+  height: 70% !important;
+}
+ .crypto-atm {
+   background-image: url(../../assets/background/10608-NML7P1.jpg);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   color: snow;
+   height: 80vh;
+   padding-top: 5%;
+ }
+ .crypto-atm h2 {
+   padding-bottom: 1.5rem;
+   color: snow;
+ }
+/* Token Ecosystem */
+.tokenImg {
+  width: 100px;
+  height: auto;
+  margin-left: 37%;
+}
+.bg-imgEcoSyst{
+  /*background-image: url(../../assets/background/destiniva.io.jpg);*/
+  width: 100%;
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #0074d9;
+}
+.bg-imgEcoSyst
+ul {
+  margin-top: 5%;
+  padding: auto 1.5rem;
+}
+/* Team */
+.team-members-img {
+  width: 15vw;
+}
+/* FAQ */
+.accordion {
+  width: 70%;
+  margin: auto;
+}
+.card-FAQ {
+  background-color: #0074d9 !important;
+}
+.btn-FAQ {
+  color: snow;
+}
+/* Footer */
+.footer {
+  background-color: #0074d9;
+  padding: 1.5rem .75rem;
+}
+.footer ul li {
+ list-style: none;
+ color: snow;
+}
+.copy {
+  font-size: small;
+  color: snow;
+}
+.footer span {
+  padding-left: .75rem;
+}
+
+
+
+/* Meia Query */
+@media (min-width:360px) and (max-width: 640px){
+  .bg-frontPage {
+    height: 88vh;
+  }
+  .token-img {
+    width: 150px;
+    height: auto;
+  }
+  .tokenImg {
+    margin-left: 35% !important;
+  }
+  /* Cryto ATM */
+  .crypto-atm {
+    height: 108vh;
+  }
+  .atm-img {
+    display: none;
+  }
+  /* Team */
+.team-members-img {
+  width: 60vw;
+}
+  /* FAQ */
+  .accordion {
+    width: 99%;
+    margin: auto;
+  }
+  .btn-FAQ {
+    white-space: unset;
+  }
+  .hidden {
+    display: none;
+  }
+  .footerMails li {
+    font-size: .95rem;
+  }
+  .img-video {
+    display: none;
+  }
+  .videoPlayBtn {
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    background-color: #0074d9;
+    padding: .85rem;
+    z-index: 1000;
+    border-radius: 50%
+  }
+  .fa-play {
+    color: snow;
+    font-size: .85rem;
+  }
+  .DSTToken {
+    display: none;
+  }
+
+  .platform {
+    padding-top: 2.5rem;
+  }
+}
+ @media (min-width: 414px) and (max-width: 736px ) {
+   .img-laptop {
+     padding-right: 0 !important;
+   }
+   .img-pc {
+     padding-left: 0 !important;
+   }
+   .title-pdr {
+     padding-left: 0 !important;
+     font-size: 1.65rem;
+   }
+   .text-shadow {
+    text-shadow: 3px 3px 3px rgba(0,116,217, 1);
+   }
+   .DSTToken {
+     max-width: 70%;
+   }
+   .hidden {
+     display: none !important;
+   }
+ }

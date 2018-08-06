@@ -1,0 +1,13 @@
+.thead-blue {
+  background-color: #0074d9;
+  color: snow;
+}
+.tableOrders {
+  padding: .5rem;
+}
+.status {
+  background-color: orange;
+  padding: .2rem;
+  border-radius: 5px;
+  color: snow;
+}

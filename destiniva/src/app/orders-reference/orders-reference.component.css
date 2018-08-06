@@ -1,0 +1,22 @@
+.orderReferenceContainer {
+  margin-top: 1.5rem;
+}
+.orderReference {
+  color: orange;
+}
+.status {
+  background-color: orange;
+  color: snow;
+  padding: .3rem;
+  border-radius: 5px;
+  margin-left: .75rem;
+}
+.orderReferenceInfo {
+  padding: .5rem;
+}
+.paymentPendingInfo {
+  padding: .5rem;
+  background-color: #0074d9;
+  color: snow;
+  background-color: rgba(0, 116, 217, .7)
+}

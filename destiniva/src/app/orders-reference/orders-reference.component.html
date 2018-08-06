@@ -1,0 +1,27 @@
+<div class="orderReferenceContainer">
+  <h3 class="text-center">
+    Order ID: <span class="orderReference">{{ orderReferenceID }}</span> <span class="status">Pending</span>
+  </h3>
+<div class="orderReferenceInfo">
+  <p><strong>Creation date: </strong> {{date | date}}</p>
+  <p><strong>Payment Method:</strong> Crypto</p>
+
+  <h3>Fiat Amount</h3>
+  <p><strong>5,000 USD</strong></p>
+</div>
+<div class="paymentPendingInfo">
+  <div class="row">
+    <div class="col-md-8">
+        <h3>Payment Pending</h3>
+        <p><strong>Please Transfer 0.56151699 BTC to the following address:</strong></p>
+        <p>Address</p>
+        <p><strong>From the Address</strong></p>
+        <p>Address</p>
+        <p class="text-danger"><strong>Important notice: </strong> the Payment must come from this wallet to be processed correctly.</p>
+    </div>
+    <div class="col-md-4">
+        <img src="http://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=" alt="qrcode" width="50%" height="auto">
+    </div>
+  </div>
+</div>
+</div>

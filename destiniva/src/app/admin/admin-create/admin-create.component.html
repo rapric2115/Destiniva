@@ -1,0 +1,41 @@
+<div class="container">
+  <h3 class="text-center">Add a New Admin</h3>
+  <div [hidden]="submitted">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="admin.name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="lastname">Lastname</label>
+        <input type="text" class="form-control" id="lastname" [(ngModel)]="admin.lastName" name="lastname" required>
+      </div>
+      <div class="form-group">
+        <label for="position">Position</label>
+        <input type="text" class="form-control" id="position" [(ngModel)]="admin.position" name="position" required>
+      </div>
+      <div class="form-group">
+        <label for="salary">Salary</label>
+        <input type="text" class="form-control" id="salary" [(ngModel)]="admin.salary" name="salary">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="number" class="form-control" id="phone" [(ngModel)]="admin.phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email" [(ngModel)]="admin.email" name="email" required>
+      </div>
+      <div class="form-group">
+          <label for="rol">Rol</label>
+          <input type="text" class="form-control" id="rol" [(ngModel)]="admin.rol" name="rol" required>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+  <div [hidden]="!submitted">
+    <h4 class="text-center">You submitted successfully!</h4>
+    <button class="btn btn-outline-success" (click)="newAdmin()">Add New Admin</button>
+    <button class="btn btn-outline-primary" routerLink="/admin">return to admin</button>
+  </div>
+</div>
