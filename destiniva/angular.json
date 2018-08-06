@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "destiniva": {
+    "Destiniva": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,14 +13,24 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/destiniva",
+            "outputPath": "dist/Destiniva",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/logos",
+              "src/assets/background",
+              "src/assets/token",
+              "src/assets/exchange-logo",
+              "src/assets/DST-Platforms",
+              "src/assets/mobile",
+              "src/assets/team",
+              "src/assets/loading",
+              "src/manifest.json",
+              "src/assets/video"
             ],
             "styles": [
               "src/styles.css"
@@ -43,25 +53,26 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": true,
+              "serviceWorker": true
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "destiniva:build"
+            "browserTarget": "Destiniva:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "destiniva:build:production"
+              "browserTarget": "Destiniva:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "destiniva:build"
+            "browserTarget": "Destiniva:build"
           }
         },
         "test": {
@@ -77,7 +88,17 @@
             "scripts": [],
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/logos",
+              "src/assets/background",
+              "src/assets/token",
+              "src/assets/exchange-logo",
+              "src/assets/DST-Platforms",
+              "src/assets/mobile",
+              "src/assets/team",
+              "src/assets/loading",
+              "src/manifest.json",
+              "src/assets/video"
             ]
           }
         },
@@ -95,7 +116,7 @@
         }
       }
     },
-    "destiniva-e2e": {
+    "Destiniva-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,7 +124,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "destiniva:serve"
+            "devServerTarget": "Destiniva:serve"
           }
         },
         "lint": {
@@ -118,5 +139,5 @@
       }
     }
   },
-  "defaultProject": "destiniva"
+  "defaultProject": "Destiniva"
 }
